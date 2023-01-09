@@ -22,6 +22,14 @@ export const Product = () => {
         })
     }, [])
 
+    const [isProductInCart, setIsProductIncart] = useState(false)
+
+    // ...
+    const addProductToCartHandler = () => {
+        alert('Товар успешно добавлен в корзину')
+        setIsProductIncart(true)
+    }
+
 
     return (
         <div>
@@ -49,16 +57,16 @@ export const Product = () => {
                                 <p>{product.category}</p>
                             </div>
                             <p className="description">{product.description}</p>
-                            <button>
+                            <button onClick={addProductToCartHandler} >
                                 <img src={cartWhite} alt="" />
-                                Add to cart
+                                {isProductInCart ? 'Go to cart' : 'Add to cart'}
                             </button>
                         </div>
                     </div>
             }
 
 
-            <Reviews/>
+            <Reviews />
         </div>
     )
 } 

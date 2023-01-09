@@ -25,7 +25,7 @@ export const Reviews = () => {
         let newValue = e.currentTarget.value
         setCurrentReview(newValue)
     }
-
+    
     const addReviewHandler = () => {
         const newReview = {
             author: 'Jane Cooper',
@@ -35,7 +35,7 @@ export const Reviews = () => {
             rating: 5
         }
         setReviews([newReview, ...reviews])
-        
+
     }
     return (
         <div>
