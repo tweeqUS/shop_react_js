@@ -6,6 +6,7 @@ import arrowBack from './assets/img/arrowBack.svg'
 import cartWhite from './assets/img/cartWhite.svg'
 import { Link } from "react-router-dom";
 import loading from './assets/img/load.gif'
+import { Reviews } from "./Reviews";
 
 
 export const Product = () => {
@@ -57,7 +58,7 @@ export const Product = () => {
             }
 
 
-
+            <Reviews/>
         </div>
     )
 } 
